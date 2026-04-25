@@ -1,0 +1,255 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",       // Logo type: auto, builtin, small, file, etc.
+    "source": "fedora",    // Built-in logo name or file path
+    "width": 65,           // Width in characters
+    "height": 35,          // Height in characters
+    "padding": {
+        "top": 0,          // Top padding
+        "left": 0,         // Left padding
+        "right": 2         // Right padding
+    },
+    "color": {             // Override logo colors
+        "1": "blue",
+        "2": "white"
+    }
+  },
+  "display": {
+    "separator": ": ",     // Separator between keys and values
+    "color": {
+        "keys": "blue",    // Key color
+        "title": "red"     // Title color
+    },
+    "key": {
+        "width": 12,       // Aligns keys to this width
+        "type": "string"   // string, icon, both, or none
+    },
+    "bar": {
+        "width": 10,       // Width of percentage bars
+        "char": {
+            "elapsed": "■", // Character for elapsed portion
+            "total": "-",    // Character for total portion
+        },
+    },
+    "percent": {
+        "type": 9,         // 1=number, 2=bar, 3=both, 9=colored number
+        "color": {
+            "green": "green",
+            "yellow": "light_yellow",
+            "red": "light_red"
+        }
+    }
+  },
+  "modules": [
+        {
+            "type": "host",
+            "key": "╭─󰌢",
+            "keyColor": "green"
+        },
+        {
+            "type": "cpu",
+            "key": "├─󰻠",
+            "keyColor": "green"
+        },
+        {
+            "type": "gpu",
+            "key": "├─󰍛",
+            "keyColor": "green"
+        },
+        {
+            "type": "disk",
+            "key": "├─",
+            "keyColor": "green"
+        },
+        {
+            "type": "memory",
+            "key": "├─󰑭",
+            "keyColor": "green"
+        },
+        {
+            "type": "swap",
+            "key": "├─󰓡",
+            "keyColor": "green"
+        },
+        {
+            "type": "display",
+            "key": "├─󰍹",
+            "keyColor": "green"
+        },
+        {
+            "type": "brightness",
+            "key": "├─󰃞",
+            "keyColor": "green"
+        },
+        {
+            "type": "battery",
+            "key": "├─",
+            "keyColor": "green"
+        },
+        {
+            "type": "poweradapter",
+            "key": "├─",
+            "keyColor": "green"
+        },
+        {
+            "type": "gamepad",
+            "key": "├─",
+            "keyColor": "green"
+        },
+        {
+            "type": "bluetooth",
+            "key": "├─",
+            "keyColor": "green"
+        },
+        {
+            "type": "sound",
+            "key": "╰─",
+            "keyColor": "green"
+        },
+        "break",
+
+        {
+            "type": "shell",
+            "key": "╭─",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "terminal",
+            "key": "├─",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "terminalfont",
+            "key": "├─",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "lm",
+            "key": "├─󰧨",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "de",
+            "key": "├─",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "wm",
+            "key": "├─",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "theme",
+            "key": "├─󰉼",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "icons",
+            "key": "├─󰀻",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "wallpaper",
+            "key": "╰─󰸉",
+            "keyColor": "yellow"
+        },
+        "break",
+
+        {
+            "type": "title",
+            "key": "╭─",
+            "format": "{user-name}@{host-name}",
+            "keyColor": "blue"
+        },
+        {
+            "type": "os",
+            "key": "├─{icon}", // Just get your distro's logo off nerdfonts.com
+            "keyColor": "blue"
+        },
+        {
+            "type": "kernel",
+            "key": "├─",
+            "keyColor": "blue"
+        },
+        {
+            "type": "packages",
+            "key": "├─󰏖",
+            "keyColor": "blue"
+        },
+        {
+            "type": "uptime",
+            "key": "├─󰅐",
+            "keyColor": "blue"
+        },
+        {
+            "type": "localip",
+            "key": "├─󰩟",
+            "compact": true,
+            "keyColor": "blue"
+        },
+        {
+            "type": "publicip",
+            "key": "╰─󰩠",
+            "keyColor": "blue",
+            "timeout": 1000
+        },
+    ]
+//"modules": [
+//  "title",
+//  "separator",
+//  {
+//      "type": "os",
+//      "key": "OS",
+//      "keyColor": "blue",
+//      "format": "{name} {version}"
+//  },
+//  {
+//      "type": "kernel",
+//      "key": "Kernel"
+//  },
+//  {
+//      "type": "memory",
+//      "key": "Memory",
+//      "percent": {
+//          "type": 3,     // Show both percentage number and bar
+//          "green": 30,   // Values below 30% in green
+//          "yellow": 70   // 30-70% in yellow, >70% in red
+//      }
+//  }
+//]
+}
+/*
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+    "localip",
+    "battery",
+    "poweradapter",
+    "locale",
+    "break",
+    "colors"
+  ]
+
+*/
